@@ -1,0 +1,13 @@
+/server/node_modules
+/server/config
+
+# dependencies
+/client/node_modules
+/client/.pnp
+
+
+# testing
+/client/coverage
+
+# production
+/client/build

@@ -1,0 +1,32 @@
+.disk {
+    margin-top: 20px;
+
+    &-btns {
+        display: flex;
+        gap: 20px;
+
+        button {
+            background-color: #fff;
+            border: none;
+            padding: 6px 12px;
+            cursor: pointer;
+            font-size: 17px;
+            color: #234244;
+            font-weight: 600;
+            transition: .1s all ease-in-out;
+
+            &:hover {
+                transform: scale(1.04);
+            }
+
+            &:active {
+                transform: scale(0.96);
+            }
+        }
+    }
+
+    &-back {}
+
+    &-create {}
+
+}

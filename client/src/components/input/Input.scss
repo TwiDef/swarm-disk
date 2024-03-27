@@ -1,0 +1,17 @@
+input {
+    border: none;
+    padding: 2px 6px;
+    width: 100%;
+    border-bottom: 2px solid #234244;
+    font-size: 18px;
+    outline: none;
+    transition: all .1s ease-in-out;
+
+    &::placeholder {
+        font-size: 18px;
+    }
+
+    &:focus {
+        transform: scale(1.02);
+    }
+}
