@@ -5,7 +5,8 @@ const fileSlice = createSlice({
     initialState: {
         files: [],
         currentDir: null,
-        popupDisplay: 'none'
+        popupDisplay: 'none',
+        diskStack: []
     },
     reducers: {
         setFiles: (state, action) => {
@@ -19,9 +20,23 @@ const fileSlice = createSlice({
         },
         setPopupDisplay: (state, action) => {
             state.popupDisplay = action.payload
+        },
+        pushToStack: (state, action) => {
+            state.diskStack.push(action.payload)
+        },
+        popFromState: (state, action) => {
+            state.currentDir = action.payload.slice(-1)
+            state.currentDir = state.diskStack.pop()
         }
     },
 })
 
-export const { setFiles, setCurrentDir, addFile, setPopupDisplay } = fileSlice.actions
+export const {
+    setFiles,
+    setCurrentDir,
+    addFile,
+    setPopupDisplay,
+    pushToStack,
+    popFromState
+} = fileSlice.actions
 export default fileSlice.reducer

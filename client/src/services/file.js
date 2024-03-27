@@ -9,7 +9,6 @@ export const getFiles = (dirId) => {
                     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
                 })
             dispatch(setFiles(response.data))
-            /*  console.log(response.data) */
         } catch (error) {
             alert(error.response.data.message)
         }
@@ -28,7 +27,6 @@ export const createDir = (dirId, name) => {
                     headers: { Authorization: `Bearer ${localStorage.getItem('token')}` }
                 })
             dispatch(addFile(response.data))
-            /*  console.log(response.data) */
         } catch (error) {
             alert(error.response.data.message)
         }
