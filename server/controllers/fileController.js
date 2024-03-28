@@ -68,7 +68,7 @@ class FileController {
             const dbFile = new File({
                 name: file.name,
                 type,
-                size: fiel.size,
+                size: file.size,
                 path: parent?.path,
                 parent: parent?._id,
                 user: user._id

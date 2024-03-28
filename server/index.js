@@ -8,7 +8,10 @@ const cors = require('cors') // <--- important
 const fileUpload = require('express-fileupload')
 const PORT = config.get('serverPort');
 
-app.use(fileUpload({}))
+app.use(fileUpload({
+    defCharset: 'utf8',
+    defParamCharset: 'utf8'
+}))
 app.use(cors()) // <--- important
 app.use(express.json())
 app.use('/api/auth', authRouter)
