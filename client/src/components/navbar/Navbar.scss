@@ -1,8 +1,15 @@
 .navbar {
     background-color: #fff;
-    display: flex;
-    justify-content: space-between;
-    padding: 10px 30px;
+
+
+    &-wrapper {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 20px;
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+    }
 
     &-title {
         font-size: 22px;

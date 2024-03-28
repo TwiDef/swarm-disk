@@ -1,5 +1,6 @@
 /server/node_modules
 /server/config
+/server/files
 
 # dependencies
 /client/node_modules
@@ -11,3 +12,4 @@
 
 # production
 /client/build
+

@@ -21,19 +21,20 @@ function App() {
     return (
         <div className="App">
             <Navbar />
-            {!isAuth ?
-                <Routes>
-                    <Route path='/registration' element={<Registration />} />
-                    <Route path='/login' element={<Authorization />} />
-                    <Route path='*' element={<Navigate to='/' replace />} />
-                </Routes>
-                :
-                <Routes>
-                    <Route path='/' element={<Disk />} />
-                    <Route path='*' element={<Navigate to='/' replace />} />
-                </Routes>
-            }
-
+            <div className='container'>
+                {!isAuth ?
+                    <Routes>
+                        <Route path='/registration' element={<Registration />} />
+                        <Route path='/login' element={<Authorization />} />
+                        <Route path='*' element={<Navigate to='/' replace />} />
+                    </Routes>
+                    :
+                    <Routes>
+                        <Route path='/' element={<Disk />} />
+                        <Route path='*' element={<Navigate to='/' replace />} />
+                    </Routes>
+                }
+            </div>
         </div>
     );
 }
