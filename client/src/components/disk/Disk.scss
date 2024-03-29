@@ -1,5 +1,6 @@
 .disk {
     margin-top: 20px;
+    height: calc(100vh - 50px - 50px);
 
     &-btns {
         display: flex;
@@ -53,4 +54,15 @@
 
     &-create {}
 
+}
+
+.drag-area {
+    width: 100%;
+    height: calc(100vh - 100px - 20px);
+    border: dashed #234244 3px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
 }
